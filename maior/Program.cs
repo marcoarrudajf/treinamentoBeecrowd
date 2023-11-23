@@ -10,6 +10,8 @@ using System.Xml.Schema;
 
 namespace PositiveValuesAverage
 {
+    /* Treino de soluções de problema com c# no beecrowd.
+     * Treinamento simples de criações de funções para gerar resultados esperado. */
     class Program
     {
         static void Main(string[] args)
@@ -110,7 +112,9 @@ namespace PositiveValuesAverage
             //tacografo();
             //notaDaProva();
             //contarMandioca();
-            corrida();
+            //corrida();
+            //abasDePerices();
+            domino();
         }
 
         public void triangulo()
@@ -1437,6 +1441,17 @@ namespace PositiveValuesAverage
             }
             Console.WriteLine(res);
         }
+
+        public static void domino()
+        {
+            int n = int.Parse(Console.ReadLine());           
+            int res = ((n + 1) * (n + 2)) / 2;
+
+            Console.WriteLine(res);
+        }
+
+
+
     }
 }
 
