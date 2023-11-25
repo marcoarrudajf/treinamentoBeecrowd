@@ -114,7 +114,8 @@ namespace PositiveValuesAverage
             //contarMandioca();
             //corrida();
             //abasDePerices();
-            domino();
+            //domino();
+            aviaoDePapel();
         }
 
         public void triangulo()
@@ -1448,6 +1449,22 @@ namespace PositiveValuesAverage
             int res = ((n + 1) * (n + 2)) / 2;
 
             Console.WriteLine(res);
+        }
+
+        public static void aviaoDePapel()
+        {
+            string[] list = Console.ReadLine().Split();
+            int c = int.Parse(list[0]);
+            int p = int.Parse(list[1]);
+            int f = int.Parse(list[2]);
+            if(c * f <= p)
+            {
+                Console.WriteLine("S");
+            }
+            else
+            {
+                Console.WriteLine("N");
+            }
         }
 
 
