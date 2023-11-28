@@ -115,7 +115,9 @@ namespace PositiveValuesAverage
             //corrida();
             //abasDePerices();
             //domino();
-            aviaoDePapel();
+            //aviaoDePapel();
+            //bobConduite();
+            feijao();
         }
 
         public void triangulo()
@@ -1397,23 +1399,23 @@ namespace PositiveValuesAverage
             for (int i = 1; i <= n; i++)
             {
                 int num = int.Parse(Console.ReadLine());
-                 if(i == 1)
+                if (i == 1)
                 {
                     soma += num * curup;
                 }
-                 else if(i == 2)
+                else if (i == 2)
                 {
                     soma += num * boit;
                 }
-                 else if(i == 3)
+                else if (i == 3)
                 {
                     soma += num * boto;
-                }  
-                else if(i == 4)
+                }
+                else if (i == 4)
                 {
                     soma += num * mapi;
-                }  
-                else if(i == 5)
+                }
+                else if (i == 5)
                 {
                     soma += num * iara;
                 }
@@ -1431,21 +1433,21 @@ namespace PositiveValuesAverage
             if (c < n)
             {
                 int temp = c;
-                c = n; 
+                c = n;
                 n = temp;
             }
 
-            while(c >= n)
+            while (c >= n)
             {
                 res = c - n;
-                c = res;                    
+                c = res;
             }
             Console.WriteLine(res);
         }
 
         public static void domino()
         {
-            int n = int.Parse(Console.ReadLine());           
+            int n = int.Parse(Console.ReadLine());
             int res = ((n + 1) * (n + 2)) / 2;
 
             Console.WriteLine(res);
@@ -1457,7 +1459,7 @@ namespace PositiveValuesAverage
             int c = int.Parse(list[0]);
             int p = int.Parse(list[1]);
             int f = int.Parse(list[2]);
-            if(c * f <= p)
+            if (c * f <= p)
             {
                 Console.WriteLine("S");
             }
@@ -1465,6 +1467,53 @@ namespace PositiveValuesAverage
             {
                 Console.WriteLine("N");
             }
+        }
+
+
+        public static void bobConduite()
+        {
+            int teste = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < teste; i++)
+            {
+                string[] list = Console.ReadLine().Split();
+                int r1 = int.Parse(list[0]);
+                int r2 = int.Parse(list[1]);
+                int res = r1 + r2;
+                Console.WriteLine(res);
+            }
+        }
+
+
+        public static void feijao()
+        {
+            string[] list = Console.ReadLine().Split();
+            int c1 = int.Parse(list[0]);
+            int c2 = int.Parse(list[1]);
+            int c3 = int.Parse(list[2]);
+            int c4 = int.Parse(list[3]);
+            int res = 0;
+
+            for(int i = 1; i <= list.Length; i++)
+            {
+                if(c1 == 1)
+                {
+                   res = 1;
+                } 
+                else if( c2 == 1) 
+                {
+                    res = 2;
+                }
+                else if(c3 == 1)
+                {
+                    res = 3;
+                }
+                else if(c4 == 1)
+                {
+                    res = 4;
+                }
+            }
+            Console.WriteLine(res);
         }
 
 
