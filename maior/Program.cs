@@ -1,4 +1,5 @@
-﻿using System;
+﻿using maior;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Formats.Asn1;
@@ -8,7 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml.Schema;
 
-namespace PositiveValuesAverage
+namespace Principal
 {
     /* Treino de soluções de problema com c# no beecrowd.
      * Treinamento simples de criações de funções para gerar resultados esperado. */
@@ -16,48 +17,10 @@ namespace PositiveValuesAverage
     {
         static void Main(string[] args)
         {
-            //int contIn = 0;
-            //int contOut = 0;
-            //int n = int.Parse(Console.ReadLine());
-            //for (int i = 0; i < n; i++)
-            //{
-            //    int x = int.Parse(Console.ReadLine());
-            //    if (x >= 10 && x < 20)
-            //    {
-            //        contIn++;
-            //    }
-            //    else
-            //    {
-            //        contOut++;
-            //    }
-            //}
 
-            //Console.WriteLine($"{contIn} in");
-            //Console.WriteLine($"{contOut} out");
+            CrescimentoCidade cc = new CrescimentoCidade();
 
-            //for (int i = 2; i <= 2; i++)
-            //{
-            //    if (i % 2 == 0)
-            //    {
-            //        Console.WriteLine(i++);
-            //    }
-            //}
-
-            //__________________________________________________________AREA CALCULO________________________
-
-
-
-            //===============
-
-            //string[] p1 = Console.ReadLine().Split(' ');
-            //string[] p2 = Console.ReadLine().Split(' ');
-            //double x1 = double.Parse(p1[0]);
-            //double y1 = double.Parse(p1[1]);
-            //double x2 = double.Parse(p2[0]);
-            //double y2 = double.Parse(p2[1]);
-            //double res = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
-            //Console.WriteLine($"{res:F4}");
-
+            //Chamada das funções estaticas
 
             //somaImparseq();
             //numImparesSeq();
@@ -117,7 +80,19 @@ namespace PositiveValuesAverage
             //domino();
             //aviaoDePapel();
             //bobConduite();
-            feijao();
+            //feijao();
+            //top();
+            //truco();
+            //qualANota();
+            //saidaSeis();
+            //McDonalds();
+            //eventoXp();
+
+            //Teste ex = new Teste();
+            //ex.extrato();
+
+            //Nova nova = new Nova();
+            //nova.novaFun();
         }
 
         public void triangulo()
@@ -1339,7 +1314,6 @@ namespace PositiveValuesAverage
             Console.WriteLine(res);
         }
 
-
         public static void tacografo()
         {
             int n = int.Parse(Console.ReadLine());
@@ -1383,7 +1357,6 @@ namespace PositiveValuesAverage
                 Console.WriteLine("A");
             }
         }
-
 
         public static void contarMandioca()
         {
@@ -1469,7 +1442,6 @@ namespace PositiveValuesAverage
             }
         }
 
-
         public static void bobConduite()
         {
             int teste = int.Parse(Console.ReadLine());
@@ -1484,7 +1456,6 @@ namespace PositiveValuesAverage
             }
         }
 
-
         public static void feijao()
         {
             string[] list = Console.ReadLine().Split();
@@ -1494,21 +1465,21 @@ namespace PositiveValuesAverage
             int c4 = int.Parse(list[3]);
             int res = 0;
 
-            for(int i = 1; i <= list.Length; i++)
+            for (int i = 1; i <= list.Length; i++)
             {
-                if(c1 == 1)
+                if (c1 == 1)
                 {
-                   res = 1;
-                } 
-                else if( c2 == 1) 
+                    res = 1;
+                }
+                else if (c2 == 1)
                 {
                     res = 2;
                 }
-                else if(c3 == 1)
+                else if (c3 == 1)
                 {
                     res = 3;
                 }
-                else if(c4 == 1)
+                else if (c4 == 1)
                 {
                     res = 4;
                 }
@@ -1516,9 +1487,181 @@ namespace PositiveValuesAverage
             Console.WriteLine(res);
         }
 
+        public static void top()
+        {
+            int k = int.Parse(Console.ReadLine());
+            int saida = 0;
+            if (k <= 1)
+            {
+                saida = 1;
+            }
+            else if (k <= 3)
+            {
+                saida = 3;
+            }
+            else if (k <= 5)
+            {
+                saida = 5;
+            }
+            else if (k <= 10)
+            {
+                saida = 10;
+            }
+            else if (k <= 25)
+            {
+                saida = 25;
+            }
+            else if (k <= 50)
+            {
+                saida = 50;
+            }
+            else if (k <= 100)
+            {
+                saida = 100;
+            }
+            Console.WriteLine($"Top {saida}");
+        }
+
+        public static void truco()
+        {
+            string[] list = Console.ReadLine().Split();
+            int a = int.Parse(list[0]);
+            int b = int.Parse(list[1]);
+            int res = 0;
+
+            for (int i = 0; i < list.Length; i++)
+            {
+                if (a >= b)
+                {
+                    res = a;
+                }
+                else
+                {
+                    res = b;
+                }
+            }
+            Console.WriteLine(res);
+        }
+
+        public static void qualANota()
+        {
+            int nota1 = int.Parse(Console.ReadLine());
+            int media = int.Parse(Console.ReadLine());
+            int nota2 = (media + media) - nota1;
+
+            Console.WriteLine(nota2);
+        }
+
+        //sem pedir ajuda primeira vez
+        public static void saidaSeis()
+        {
+            string minhaVar = "AMO FAZER EXERCICIO NO URI";
+            Console.WriteLine($"<{minhaVar}>");
+            Console.WriteLine($"<{minhaVar,30}>");
+            Console.WriteLine($"<{minhaVar.Substring(0, Math.Min(minhaVar.Length, 20)),-20}>");
+            Console.WriteLine($"<{minhaVar}>");
+            Console.WriteLine($"<{minhaVar,-30}>");
+            Console.WriteLine($"<{minhaVar}>");
+            Console.WriteLine($"<{minhaVar.Substring(0, Math.Min(minhaVar.Length, 20)),30}>");
+            Console.WriteLine($"<{minhaVar.Substring(0, Math.Min(minhaVar.Length, 20)),-30}>");
+
+        }
+
+        public static void eventoXp()
+        {
+            int x = 0;
+            int m = 0;
+            int res = 0;
+
+            do
+            {
+                string[] ent = Console.ReadLine().Split(' ');
+                x = int.Parse(ent[0]);
+                m = int.Parse(ent[1]);
+                res = x * m;
+                if (x != 0 && m != 0)
+                {
+                    Console.WriteLine(res);
+                }
+            }
+            while (x != 0 && m != 0);
+        }
 
 
     }
+
+    class Teste
+    {
+        public void extrato()
+        {
+
+            string[] valor = Console.ReadLine().Split(' ');
+            int n = int.Parse(valor[0]);
+            int s = int.Parse(valor[1]);
+            int saldo = s;
+            int menorValor = saldo;
+
+            for (int i = 0; i < n; i++)
+            {
+                int entr = int.Parse(Console.ReadLine());
+
+                saldo += entr;
+
+                if (menorValor > saldo)
+                {
+                    menorValor = saldo;
+                }
+            }
+
+            Console.WriteLine($"{menorValor}");
+        }
+    }
+
+    class Nova
+    {
+        public void novaFun()
+        {
+            Console.WriteLine("Entramos na função nova.");
+
+            int contIn = 0;
+            int contOut = 0;
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 0; i < n; i++)
+            {
+                int x = int.Parse(Console.ReadLine());
+                if (x >= 10 && x < 20)
+                {
+                    contIn++;
+                }
+                else
+                {
+                    contOut++;
+                }
+            }
+
+            Console.WriteLine($"{contIn} in");
+            Console.WriteLine($"{contOut} out");
+
+            for (int i = 2; i <= 2; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine(i++);
+                }
+            }
+
+            string[] p1 = Console.ReadLine().Split(' ');
+            string[] p2 = Console.ReadLine().Split(' ');
+            double x1 = double.Parse(p1[0]);
+            double y1 = double.Parse(p1[1]);
+            double x2 = double.Parse(p2[0]);
+            double y2 = double.Parse(p2[1]);
+            double res = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
+            Console.WriteLine($"{res:F4}");
+
+        }
+    }
+
 }
 
 
