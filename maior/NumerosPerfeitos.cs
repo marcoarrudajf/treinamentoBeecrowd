@@ -11,7 +11,6 @@ namespace maior
     {
         public void numeroPerfeito(int contador)
         {
-            //int contador = int.Parse(Console.ReadLine());
             int soma = 0;
             int valor;
 
