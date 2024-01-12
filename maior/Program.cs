@@ -18,7 +18,9 @@ namespace Principal
         static void Main(string[] args)
         {
 
-            CrescimentoCidade cc = new CrescimentoCidade();
+            //CrescimentoCidade cc = new CrescimentoCidade();
+            NumerosPerfeitos numerosPerfeitos = new NumerosPerfeitos();
+            numerosPerfeitos.numeroPerfeito(int.Parse(Console.ReadLine()));
 
             //Chamada das funções estaticas
 
